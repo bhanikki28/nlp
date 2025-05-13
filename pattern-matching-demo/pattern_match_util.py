@@ -14,3 +14,10 @@ def get_email_id(input_data):
     pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
     email_id = re.findall(pattern,input_data)
     return email_id
+
+''' function to match the order no from 
+    the input string and return it '''
+def get_order_no(input_data):
+    pattern = r'order[^\d]*(\d*)'
+    order_no = re.findall(pattern,input_data)
+    return order_no
